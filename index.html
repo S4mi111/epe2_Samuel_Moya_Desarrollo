@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tabla de Productos con Filtros</title>
+<style>
+    body { font-family: Arial, sans-serif; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; }
+    th { background-color: #f2f2f2; }
+    #filtroBtn {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007BFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #filtroBtn:hover {
+        background-color: #0056b3;
+    }
+
+    #filtroBtn:active {
+        background-color: #004085;
+        outline: none;
+    }
+
+    #filtroBtn:focus {
+        outline: none;
+    }
+</style>
+</head>
+<body>
+
+<h2>Productos</h2>
+
+<label for="filtroProveedor">Filtrar por Proveedor:</label>
+<select id="filtroProveedor">
+    <option value="">Todos</option>
+</select>
+
+<label for="filtroCategoria">Filtrar por Categoría:</label>
+<select id="filtroCategoria">
+    <option value="">Todos</option>
+</select>
+
+<button id="filtroBtn" onclick="filtrarProductos()">Aplicar Filtro</button>
+
+<table id="productosTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Proveedor</th>
+            <th>Categoría</th>
+            <th>Cantidad por Unidad</th>
+            <th>Precio por Unidad</th>
+            <th>Unidades en Existencia</th>
+            <th>Unidades en Pedido</th>
+            <th>Nivel Nuevo Pedido</th>
+            <th>Suspendido</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Las filas de la tabla serán insertadas aquí por JavaScript -->
+    </tbody>
+</table>
+
+<script src="js.js?v=1.1"></script>
+
+</body>
+</html>
